@@ -1,4 +1,4 @@
-# pythonSets
+Alt-H1 pythonSets
 
 An introduction to sets
 
@@ -10,14 +10,18 @@ It’s back to school time! You spend a few minutes making a list of all the sup
 
 Let’s make a shopping list!
 
+```python
 shopping_list = [“pens“, “notebooks”, “graph paper”]
+```
 
 We know what we need now, but what if you need to add something more to the list? You already know that since we are using a list, all we need to do is add something to the list is:
 
+```python
 shopping_list.append(“pencils”)
 print(shopping_list)
 
-> > [“pens“, “notebooks”, “graph paper”, “pencils”]
+[“pens“, “notebooks”, “graph paper”, “pencils”]
+```
 
 Lists are great for storing ordered information. And if we want to index information we can use dictionaries to store values that are indexed with specific keys so we can access that information quickly.
 
@@ -29,12 +33,14 @@ So what if you want to store information unordered, but still be able to find a 
 
 Sets are used to store unique information, in an unordered list. The values in a set are immutable, which means that you can’t change individual values like you can with a list or dict.
 
+```python
 v = set(“hello”)
 [“h”,”e”,”l”,”o”]
 v[0]
 Traceback (most recent call last):
 File "<stdin>", line 1, in <module>
 TypeError: 'set' object does not support indexing
+```
 
 You will notice a couple of interesting behaviors of sets here:
 All of the values are unique. So when we created our set from the str(“hello”), it removed the second “l” from the set
