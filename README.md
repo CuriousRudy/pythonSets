@@ -1,10 +1,11 @@
-Alt-H1 pythonSets
+# pythonSets
 
 An introduction to sets
 
-Objectives:
--Define a set
--Learn why sets are userful
+## Objectives:
+
+1. Define a set
+2. Learn why sets are userful
 
 It’s back to school time! You spend a few minutes making a list of all the supplies that you need to pick up before your first day. Do you need pens? Check! Do you need some notebooks? Some graph paper?
 
@@ -20,7 +21,7 @@ We know what we need now, but what if you need to add something more to the list
 shopping_list.append(“pencils”)
 print(shopping_list)
 
-[“pens“, “notebooks”, “graph paper”, “pencils”]
+> [“pens“, “notebooks”, “graph paper”, “pencils”]
 ```
 
 Lists are great for storing ordered information. And if we want to index information we can use dictionaries to store values that are indexed with specific keys so we can access that information quickly.
@@ -38,7 +39,7 @@ v = set(“hello”)
 [“h”,”e”,”l”,”o”]
 v[0]
 Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1, in <module>
 TypeError: 'set' object does not support indexing
 ```
 
