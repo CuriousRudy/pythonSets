@@ -28,11 +28,8 @@ Lists are great for storing ordered information. And if we want to index informa
 
 While lists and dictionaries are useful data structures to manage your information, they have two minor downsides. The first one is mutability- Lists and dictionaries can be changed(or rather, their elements can be) by using any of their numerous built in functions. The other problem you may encounter with lists, is that they can also contain duplicate values.
 
-“Here sets come to save the day”
-
-So what if you want to store information unordered, but still be able to find a specific element quickly? We use SETS
-
-Sets are used to store unique information, in an unordered list. The values in a set are immutable, which means that you can’t change individual values like you can with a list or dict.
+So what if you want to store information unordered, but still be able to find a specific element quickly?
+We use SETS
 
 ```python
 v = set(“hello”)
@@ -44,7 +41,31 @@ TypeError: 'set' object does not support indexing
 ```
 
 You will notice a couple of interesting behaviors of sets here:
-All of the values are unique. So when we created our set from the str(“hello”), it removed the second “l” from the set
-We are unable to
 
-If you haven’t heard of them, we can also use tuples to store information that can’t be changed, so if you are working with information that you only want to read, but not change, tuples may be useful, but we will cover that later.
+1. Sets are used to store unique information, in an unordered list, so all of the values are unique. So when we created our set from the str(“hello”), it removed the second “l” from the set.
+2. The other behavior is the lack of indexing. In a list `v[0]` would normally access the list at the first position, but sets do not act this way!
+
+So let's try to make our shopping list with a set instead of a list:
+
+we can use the set() constructor to create a set with predefined information
+
+```python
+shopping_list = set("pens", "notebooks", "graph paper")
+```
+
+What if we need to add something?
+
+```python
+shopping_list.add("pencils")
+print(v)
+>>["pens", "notebooks", "graph paper", "pencils"]
+```
+
+Great! Now we have our shopping list all ready to go! One of the benefits we mentioned about sets is that their elements are always unique, so if we try to add something, like pencils, that are already in our set, they won't show twice!
+
+# Summary
+
+Lists are great for storing information that we need to keep ordered, but when we need to find something in a list, we have to go through each index to check for a match. With sets we are able to find individual elements more quickly. Besides that, sets also include some handy built-in functions to compare between sets and preform arithmetic operations on your sets.
+
+When deciding whether to use a set of list, think about this:
+Iterating through lists is faster than iterating through a set because lists are indexed. But if order isn't important, sets are better at storing unique information, especially if you are solely looking to check if something exists.
