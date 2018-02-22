@@ -29,12 +29,12 @@ So what if you want to store information unordered, but still be able to find a 
 
 Sets are used to store unique information, in an unordered list. The values in a set are immutable, which means that you can’t change individual values like you can with a list or dict.
 
-> > v = set(“hello”)
-> > [“h”,”e”,”l”,”o”]
-> > v[0]
-> > Traceback (most recent call last):
-> > File "<stdin>", line 1, in <module>
-> > TypeError: 'set' object does not support indexing
+v = set(“hello”)
+[“h”,”e”,”l”,”o”]
+v[0]
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: 'set' object does not support indexing
 
 You will notice a couple of interesting behaviors of sets here:
 All of the values are unique. So when we created our set from the str(“hello”), it removed the second “l” from the set
