@@ -15,7 +15,7 @@ Let’s make a shopping list!
 shopping_list = [“pens“, “notebooks”, “graph paper”]
 ```
 
-We know what we need now, but what if you need to add something more to the list? You already know that since we are using a list, all we need to do is add something to the list is:
+We know what we need now, but what if you need to add something more to the list? You already know that since we are using a list, all we need to do is `.append()` something to the list is:
 
 ```python
 shopping_list.append(“pencils”)
