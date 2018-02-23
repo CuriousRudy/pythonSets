@@ -82,9 +82,8 @@ print(shopping_list_set)
 And how about this fancy move when we grab our notebooks:
 
 ```python
-for word in shopping_list_set:
-    if word == "notebooks":
-        shopping_list_set.remove(word)
+    if "notebooks" in shopping_list_set:
+        shopping_list_set.remove("notebooks")
 ```
 
 And now notebooks are off of the list!
