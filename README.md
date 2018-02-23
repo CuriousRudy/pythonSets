@@ -33,7 +33,8 @@ We use SETS
 
 ```python
 v = set(“hello”)
-[“h”,”e”,”l”,”o”]
+print(v)
+>> set([“h”,”e”,”l”,”o”])
 v[0]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -50,18 +51,43 @@ So let's try to make our shopping list with a set instead of a list:
 we can use the set() constructor to create a set with predefined information
 
 ```python
-shopping_list = set("pens", "notebooks", "graph paper")
+shopping_list_set = set("pens", "notebooks", "graph paper")
 ```
 
 What if we need to add something?
 
 ```python
-shopping_list.add("pencils")
-print(v)
->>["pens", "notebooks", "graph paper", "pencils"]
+shopping_list_set.add("pencils")
+print(shopping_list_set)
+>> set(["pens", "notebooks", "graph paper", "pencils"])
 ```
 
-Great! Now we have our shopping list all ready to go! One of the benefits we mentioned about sets is that their elements are always unique, so if we try to add something, like pencils, that are already in our set, they won't show twice!
+Great! Now we have our shopping list all ready to go!
+
+When we are shopping, we can print the list, or we can see if something is in the list:
+
+```python
+"pens" in shopping_list_set
+>> True
+```
+
+And when we put the pens in our shopping basket, we can go ahead and remove it from our list:
+
+```python
+shopping_list.set.remove("pens")
+print(shopping_list_set)
+>> set(["notebooks", "graph paper", "pencils"])
+```
+
+And how about this fancy move when we grab our notebooks:
+
+```python
+for word in shopping_list_set:
+    if word == "notebooks":
+        shopping_list_set.remove(word)
+```
+
+And now notebooks are off of the list!
 
 # Summary
 
